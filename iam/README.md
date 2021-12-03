@@ -17,9 +17,9 @@ This procedure describes how to use the AWS Management Console to create an IAM 
 
 2.  Enable access to billing data for the IAM admin user that you will create as follows:
 
-    1.  On the navigation bar, choose your account name, and then choose **My Account**.
+    1.  On the navigation bar, choose your account name, and then choose **Account**.
 
-    2.  Next to **IAM User and Role Access to Billing Information**, choose **Edit**. You must be signed in as the root user for this section to be displayed on the account page.
+    2.  Rolling down to **IAM User and Role Access to Billing Information**, choose **Edit**. You must be signed in as the root user for this section to be displayed on the account page.
 
     3.  Select the check box to **Activate IAM Access** and choose **Update**.
 
@@ -31,7 +31,7 @@ This procedure describes how to use the AWS Management Console to create an IAM 
 
     1.  For **User name**, type `Administrator`.
 
-    2.  Select the check box for **AWS Management Console access**, select **Custom password**, and then type your new password in the text box.
+    2.  Select the check box for **Password - AWS Management Console access**, select **Custom password**, and then type your new password in the text box.
 
     3.  By default, AWS forces the new user to create a new password when first signing in. You can optionally clear the check box next to **User must create a new password at next sign-in** to allow the new user to reset their password after they sign in.
 

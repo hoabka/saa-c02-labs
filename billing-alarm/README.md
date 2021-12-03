@@ -29,7 +29,7 @@ After you've enabled billing alerts, you can create a billing alarm. In this sce
 
 **To create a billing alarm**
 1. Open the [CloudWatch console](https://console.aws.amazon.com/cloudwatch/).
-2. In the navigation pane, choose **Alarms, Create Alarm**.
+2. In the navigation pane, choose **Alarms** > **Billing** > **Create Alarm**.
 3. Choose **Select metric, Billing, Total Estimated Charge**.
     > If you don't see **Billing** or the **Total Estimated Charge** metric, you might need to enable billing alerts.
 4. Select the checkbox next to **EstimatedCharges** and choose **Select metric**.
@@ -37,28 +37,30 @@ After you've enabled billing alerts, you can create a billing alarm. In this sce
 6. For **send a notification to**, do one of the following:
 - Choose **Select an existing SNS topic** and then select the topic to notify under Send a notification to.
 - Choose **Create a new topic** and then type a name for the new SNS topic and enter the email addresses that are to receive the notifications. Separate the email names with commas.
-7. Choose **Create Alarm**.
+7. Choose **Next**
+8. Enter the **Alarm Name**, Choose **Next**
+9. Choose **Create Alarm**.
 
 ## Step 3: Check the alarm status
 Now, check the status of the billing alarm that you just created.
 1. Open the [CloudWatch console](https://console.aws.amazon.com/cloudwatch/).
-2. In the navigation pane, choose **Alarms**.
-3. Select the check box next to the alarm. Until the subscription is confirmed, it is shown as "Pending confirmation". After the subscription is confirmed, refresh the console to show the updated status.
+2. In the navigation pane, choose **Alarms** > **All Alarm**.
+3. Select the alarm name to show the alarm detail.
 
 ## Step 4: Edit a billing alarm
 For example, you may want to increase the amount of money you spend with AWS each month from $50 to $200. You can edit your existing billing alarm and increase the monetary amount that must be exceeded before the alarm is triggered.
 **To edit a billing alarm**
 1. Open the [CloudWatch console](https://console.aws.amazon.com/cloudwatch/).
-2. In the navigation pane, choose **Alarms**.
-3. Select the check box next to the alarm and choose **Actions, Modify**.
+2. In the navigation pane, choose **Alarms** > **All Alarm**.
+3. Select the check box next to the alarm and choose **Actions, Edit**.
 4. For **Whenever my total AWS charges for the month exceed**, specify the new amount that must be exceeded to trigger the alarm and send an email notification.
-5. Choose **Save Changes**.
+5. Choose **Update alarm**.
 
 ## Step 5: Delete a billing arlarm
 If you no longer need your billing alarm, you can delete it.  
 **To delete a billing alarm**
 1. Open the [CloudWatch console](https://console.aws.amazon.com/cloudwatch/).
-2. In the navigation pane, choose **Alarms**.
+2. In the navigation pane, choose **Alarms** > **All Alarm**.
 3. Select the check box next to the alarm and choose **Actions, Delete**.
 4. When prompted for confirmation, choose **Yes, Delete**.
 
