@@ -29,6 +29,7 @@ After you've enabled billing alerts, you can create a billing alarm. In this sce
 
 **To create a billing alarm**
 1. Open the [CloudWatch console](https://console.aws.amazon.com/cloudwatch/).
+    >   If necessary, change the Region to US East (N. Virginia). Billing metric data is stored in this Region and represents worldwide charges.
 2. In the navigation pane, choose **Alarms** > **Billing** > **Create Alarm**.
 3. Choose **Select metric, Billing, Total Estimated Charge**.
     > If you don't see **Billing** or the **Total Estimated Charge** metric, you might need to enable billing alerts.
