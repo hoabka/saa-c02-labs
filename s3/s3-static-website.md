@@ -127,23 +127,23 @@ The following policy is an example only and allows full access to the contents o
 3.  Under Bucket Policy, choose Edit.
 
 4.  To grant public read access for your website, copy the following bucket policy, and paste it in the Bucket policy editor.
-
-        `{
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Sid": "PublicReadGetObject",
-                "Effect": "Allow",
-                "Principal": "*",
-                "Action": [
-                    "s3:GetObject"
-                ],
-                "Resource": [
-                    "arn:aws:s3:::`Bucket-Name`/*"
-                ]
-            }
+>
+    {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::`Bucket-Name`/*"
+            ]
+        }
         ]
-    }`
+    }     
 
 5.  Update the `Resource` to your bucket name.
 
