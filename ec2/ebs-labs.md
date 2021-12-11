@@ -19,19 +19,6 @@ You can create an Amazon EBS volume and then attach it to any EC2 instance in th
 
 8.  For Availability Zone, choose the Availability Zone in which to create the volume. A volume can be attached only to an instance that is in the same Availability Zone.
 
-9.  For Snapshot ID, keep the default value (Don't create volume from a snapshot).
-
-10. (`io1` and `io2` only) To enable the volume for Amazon EBS Multi-Attach, select Enable Multi-Attach. For more information, see [Attach a volume to multiple instances with Amazon EBS Multi-Attach](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html).
-
-11. Set the encryption status for the volume.
-
-    If your account is enabled for [encryption by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default), then encryption is automatically enabled and you can't disable it. You can choose the KMS key to use to encrypt the volume.
-
-    If your account is not enabled for encryption by default, encryption is optional. To encrypt the volume, for Encryption, choose Encrypt this volume and then select the KMS key to use to encrypt the volume.
-
-    >Note  
-    Encrypted volumes can be attached only to instances that support Amazon EBS encryption. For more information, see [Amazon EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html).
-
 12. (Optional) To assign custom tags to the volume, in the Tags section, choose Add tag, and then enter a tag key and value pair. For more information, see [Tag your Amazon EC2 resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html).
 
 13. Choose Create volume.
@@ -58,12 +45,16 @@ You can create an Amazon EBS volume and then attach it to any EC2 instance in th
 
     >-   If the volume is encrypted, it can only be attached to instance types that support Amazon EBS encryption. For more information, see [Amazon EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html).
 
-5.  For Device name, enter a supported device name for the volume. This device name is used by Amazon EC2. The block device driver for the instance might assign a different device name when mounting the volume. For more information, see [Device names on Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html).
+5.  For Device name, you can leave as default.
 
 6.  Choose Attach volume.
 
-7.  Connect to the instance and mount the volume. For more information, see [Make an Amazon EBS volume available for use on Linux](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html).
-
+7.  Connect to the instance and mount the volume. For more information, see [Make an Amazon EBS volume available for use on Linux](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html).  
+In this lab, run following commands to make the volume available:  
+    >       sudo mkfs -t xfs /dev/nvme1n1
+    >       sudo mkdir /data
+    >       sudo mount /dev/nvme1n1 /data
+    >       df -h
 ## Create Amazon EBS snapshots
 You can create a point-in-time snapshot of an EBS volume and use it as a baseline for new volumes or for data backup. If you make periodic snapshots of a volume, the snapshots are incremental—the new snapshot saves only the blocks that have changed since your last snapshot.
 
