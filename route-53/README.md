@@ -13,7 +13,7 @@ Create 2 EC2 instance with these requirements:
     yum install -y httpd
     yum install -y wget
     cd /var/www/html
-    wget *file1*
+    wget https://raw.githubusercontent.com/hoabka/saa-c02-labs/master/route-53/index.html
     service httpd start
 
 >   for the second Instance:  
@@ -23,7 +23,7 @@ Create 2 EC2 instance with these requirements:
     yum install -y httpd
     yum install -y wget
     cd /var/www/html
-    wget *file2*
+    wget https://raw.githubusercontent.com/hoabka/saa-c02-labs/master/ha-architecture/index.html
     service httpd start
 
 
