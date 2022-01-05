@@ -1,6 +1,8 @@
 ## Create an auto scale system
-**Create an Application Load Balancer**
 
+![Auto scalling](https://miro.medium.com/max/974/1*uS9J8btKCQaMOhnUXp62aA.jpeg)
+
+**Create an Application Load Balancer**
 1.  Navigate to EC2 > Load Balancers.
 
 2.  Click Create Load Balancer.
@@ -13,7 +15,7 @@
     -   *Load Balancer Protocol*: HTTP
     -   *Port*: 80
     -   Select the VPC.
-    -   Add the us-east-1a and us-east-1b AZs to your ALB.
+    -   Add subnets to the Load Balancer
 4.  Click Next: Configure Security Settings
 
     > Note: Skip this screen, as we are not using HTTPS.
@@ -78,7 +80,14 @@ Create a launch template that will be used by the Auto Scaling group. The launch
 
 9.  Expand *Advanced Details*, and paste the user data in the box.  
 
->    sudo amazon-linux-extras install epel -y  
+>    #!/bin/bash
+    yum update -y  
+    yum install -y httpd  
+    yum install -y wget  
+    cd /var/www/html  
+    wget https://raw.githubusercontent.com/hoabka/saa-c02-labs/master/route-53/index.html  
+    service httpd start  
+    sudo amazon-linux-extras install epel -y  
     sudo yum install -y stress  
     stress --cpu 2 --timeout 300
 
@@ -98,12 +107,13 @@ Note: Make sure the load balancer is ready at this point.
 3.  Call the group HOLASG.
 4.  Select Launch Template, and choose the template you just created.
 5.  Select Adhere to Launch Template.
-6.  Pick the VPC from the lab environment, and select `us-east-1a` and `us-east-1b` as subnets.
+6.  Pick the VPC from the lab environment, and select subnets. Normally we should use private subnet for our application, but in this case, we use public subnet because private subnet might not have connection to the internet.
 7.  Click Next.
-8.  Check Enable load balancing.
+8.  Select **Attach to an existing load balancer**.
 9.  Select target group ALBTG.
 10. Leave the default for *Health checks*.
 11. Select Enable group metrics collection with CloudWatch.
+12. Select **Next**
 12. For *Group Size*, enter the following values:
     -   *Desired Capacity*: 2
     -   *Minimum Capacity*: 2
@@ -111,7 +121,7 @@ Note: Make sure the load balancer is ready at this point.
 13. For *Scaling Policies*, select Target tracking scaling policy and enter the following values:
     -   *Scaling Policy Name*: Target Tracking Policy
     -   *Metric type*: Average CPU utilization
-    -   *Target value*: 30
+    -   *Target value*: 50
     -   *Instances need*: 300
 14. Click Next.
 15. Click Create Auto Scaling Group.
