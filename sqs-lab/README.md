@@ -15,58 +15,50 @@ The first and most common Amazon SQS task is creating queues. This procedure sho
     You can't change the queue type after you create a queue.
 
 5.  Enter a Name for your queue. The name of a FIFO queue must end with the `.fifo` suffix.
+5. Enable **Content-based deduplication** option.
 
 6.  To create your queue with the default parameters, scroll to the bottom and choose Create Queue. Amazon SQS creates the queue and displays the queue's Details page.
 
     Amazon SQS propagates information about the new queue across the system. Because Amazon SQS is a distributed system, you may experience a slight delay before the queue is displayed on the Queues page.
+
+
+Step 2: Configure AWS CLI credential and Install boto3
+----------------------
+1. Download IAM User credential 
+2. Configure AWS CLI by run following commands:  
+    >
+         aws configure  
+         AWS Access Key ID: Access  ID
+         AWS Secret Access Key: Secret Access Key
+         Default region name: Region you are In
+3. Install boto3
+    >       
+        pip3 install boto3
 
 Step 2: Send a message
 ----------------------
 
 After you create your queue, you can send a message to it.
 
-1.  From the left navigation pane, choose Queues. From the queue list, select the queue that you created.
+1. Change the queue name in the **send_message.py** script in line 10
+2. Run script to send messagese to the queue:
+    >  
+        python3 send_message.py
 
-2.  From Actions, choose Send and receive messages.
+3. Output will return MessageID like `d4f3665f-9408-49b9-bde1-5170e714e6d0`
 
-    ![](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/images/sqs-tutorials-sending-message-to-queue-send-a-message.png)
-
-    The console displays the Send and receive messages page.
-
-3.  Enter text in the Message body
-
-4.  Enter a Message group id for the queue. For more information, see [FIFO delivery logic](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-understanding-logic.html).
-
-5.  (Optional) Enter a Message deduplication id. If you enable content-based deduplication, the message deduplication ID is not required. For more information, see [FIFO delivery logic](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-understanding-logic.html).
-
-6.  Choose Send message.
-
-    Your message is sent and the console displays a success message. Choose View details to display information about the sent message.
-
-    ![](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/images/sqs-tutorials-sending-message-success.png)
 
 Step 3: Receive and delete your message
 ---------------------------------------
 
-After you send a message to a queue, you can retrieve the message from the queue. When you request messages from a queue, you can't specify which message to retrieve. Instead, you specify the maximum number of messages (up to 10) that you want to retrieve.
+After you send a message to a queue, you can retrieve the message from the queue. 
 
-1.  From the Queues page, select a queue.
+1.  Change the queue name in the **get_message.py** script in line 7
 
-2.  From Queue Actions, select Send and receive messages.
-
-    ![](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/images/sqs-tutorials-sending-message-to-queue-send-a-message.png)
-
-    The console displays the Send and receive messages page.
-
-3.  Choose Poll for messages.
-
-    Amazon SQS begins to poll servers to find messages in the queue. The progress bar on the right side of the Receive messages section displays the polling duration.
-
-    The Messages section displays a list of the received messages. For each message, the list displays the message ID, sent date, size, and receive count.
-
-4.  To delete messages, select the messages that you want to delete and then choose Delete.
-
-5.  In the Delete Messages dialog box, choose Delete.
+2.  Run script to get messagese from the queue:
+    >
+        python3 get_message.py
+3. Output will be return the message like `Hello, message number 6`
 
 Step 4: Delete your queue
 -------------------------
@@ -82,5 +74,3 @@ Step 4: Delete your queue
 4.  In the Delete queue dialog box, confirm the deletion by entering `delete`.
 
 5.  Choose Delete.
-
-6.
