@@ -1,5 +1,20 @@
 # Setting up an Amazon SNS topic using the AWS Management Console
-cribe to an SNS topic
+
+## Create SNS Topic
+
+1. Sign in to the Amazon SNS console.
+1.  On the Topics page, choose Create topic.
+
+2.  On the Create topic page, in the Details section, do the following:
+
+    1.  For Type, choose Standard.
+
+    2.  Enter a Name for the topic. 
+
+    3.  (Optional) Enter a Display name for the topic.
+    4. Choose Create topic.
+
+## Subscribe to an SNS topic
 
 1.  Open the Amazon SNS console at <https://console.aws.amazon.com/sns/v3/home>.
 
@@ -15,7 +30,7 @@ cribe to an SNS topic
 
     Your web browser displays a confirmation response from Amazon SNS.
 
-To publish a test message to an SNS topic
+## To publish a test message to an SNS topic
 
 1.  Open the Amazon SNS console at <https://console.aws.amazon.com/sns/v3/home>.
 
@@ -27,4 +42,12 @@ To publish a test message to an SNS topic
 
 5.  Choose Publish Message.
 
+6.  Check your email to confirm that you received the message.
+
+## Publish message by Python script
+
+1. Edit the **publish_message.py** script, change topic_arn you created before
+2. Run commnand to publish message:
+    >
+        Python3 publish_message.py
 6.  Check your email to confirm that you received the message.
