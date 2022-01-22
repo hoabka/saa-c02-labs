@@ -38,7 +38,7 @@
                 redirect: 'follow'
             };
             // make API call with parameters and use promises to get response
-            fetch("https://ugpv3r9pl9.execute-api.ap-southeast-1.amazonaws.com/dev/", requestOptions)
+            fetch("https://h8x1xrhi7l.execute-api.ap-southeast-1.amazonaws.com/staging", requestOptions)
             .then(response => response.text())
             .then(result => alert(JSON.parse(result).body))
             .catch(error => console.log('error', error));
