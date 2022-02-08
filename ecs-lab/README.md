@@ -75,4 +75,3 @@ Go to Load balancer DNS then you will be see the Nginx welcome page.
 
 
 
-
