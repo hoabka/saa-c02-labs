@@ -74,11 +74,9 @@ In the steps in this section, you create organizational units (OUs) and place yo
 
     This displays the MainApp OU as a child of Production.
 
-9.  Choose the check box ![](https://docs.aws.amazon.com/organizations/latest/userguide/images/checkbox-selected.png) , not its name), choose Actions, and then under AWS account, choose Move.
+9.  Choose the check box ![](https://docs.aws.amazon.com/organizations/latest/userguide/images/checkbox-selected.png) , (not its name), choose Actions, and then under AWS account, choose Move.
 
-10. On the Move AWS account '`member-account-name`' page, choose the radio button ![](https://docs.aws.amazon.com/organizations/latest/userguide/images/radio-button-selected.png) , not its name) and then choose Move AWS account.
-
-11. Choose the check box ![](https://docs.aws.amazon.com/organizations/latest/userguide/images/checkbox-selected.png) , not its name), choose Actions, and then under AWS account, choose Move.
+11. Choose the account name, then choose the check box ![](https://docs.aws.amazon.com/organizations/latest/userguide/images/checkbox-selected.png) , not its name), choose Actions, and then under AWS account, choose Move.
 
 12. On the Move AWS account '`member-account-name`' dialog box, the triangle next to Production to expand that branch and expose MainApp.
 
@@ -87,7 +85,7 @@ In the steps in this section, you create organizational units (OUs) and place yo
 Step 3: Create the service control policies
 -------------------------------------------
 
-In the steps in this section, you create three [service control policies (SCPs)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html) and attach them to the root and to the OUs to restrict what users in the organization's accounts can do. The first SCP prevents anyone in any of the member accounts from creating or modifying any AWS CloudTrail logs that you configure. The management account isn't affected by any SCP, so after you apply the CloudTrail SCP, you must create any logs from the management account.
+In the steps in this section, you create a[service control policies (SCPs)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html) and attach It to the root and to the OUs to restrict what users in the organization's accounts can do. The  SCP prevents anyone in any of the member accounts from perform any action on S3 bucket.
 
 ### Enable the service control policy type for the organization
 
@@ -101,8 +99,8 @@ Before you can attach a policy of any type to a root or to any OU within a root,
 
 ### Create your SCPs
 
-Now that service control policies are enabled in your organization, you can create the three policies that you need for this tutorial.
-To create the first SCP that blocks CloudTrail configuration actions
+Now that service control policies are enabled in your organization, you can create the policy that you need for this tutorial.
+To create the first SCP that blocks S3 actions
 
 1.  Navigate to the [Policies](https://console.aws.amazon.com/organizations/v2/home/policies) page, and then choose Service Control Policies.
 
