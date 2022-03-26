@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fad995ac-a223-41ca-a14a-2a29f46baceb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ha-architecture/LoadBalancer and AutoScaling.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/Migrate WP to AWS with EFS and RDS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/architecture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/createDB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/createEFS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/dbEngine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/healCheck.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/imgTemplate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/mountEFSCommand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/mountEFS_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/statusEFS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/testPage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ha-architecture/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26lMpMftIERTiVc82gFKd4zRM9o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ha-architecture/images/wpmigration" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ha-architecture/images/wpmigration" />
+      <recent name="$PROJECT_DIR$/ha-architecture/images" />
+      <recent name="$PROJECT_DIR$/ha-architecture" />
+      <recent name="$PROJECT_DIR$/rds-labs/images" />
+      <recent name="$PROJECT_DIR$/rds-labs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ha-architecture/images/imgTemplate.png" />
+      <recent name="$PROJECT_DIR$/ha-architecture/images/wpmigration" />
+      <recent name="$PROJECT_DIR$/ha-architecture/images/wpmigration/imageTemplate.png" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fad995ac-a223-41ca-a14a-2a29f46baceb" name="Changes" comment="" />
+      <created>1647993901456</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647993901456</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
