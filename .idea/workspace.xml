@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fad995ac-a223-41ca-a14a-2a29f46baceb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ha-architecture/LoadBalancer and AutoScaling.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/Migrate WP to AWS with EFS and RDS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/architecture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/cover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/createDB.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/createEFS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/dbEngine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/healCheck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/imgTemplate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/mountEFSCommand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/mountEFS_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/statusEFS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ha-architecture/images/wpmigration/testPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ha-architecture/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ha-architecture/Migrate WP to AWS with EFS and RDS.md" beforeDir="false" afterPath="$PROJECT_DIR$/ha-architecture/Migrate WP to AWS with EFS and RDS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

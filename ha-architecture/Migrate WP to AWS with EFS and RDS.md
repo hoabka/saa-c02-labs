@@ -1,11 +1,10 @@
-Overview
-=======================================
+# Overview
+
 Highly Available and Fault Tolerant Solution
 
 ![](https://github.com/hoabka/saa-c02-labs/blob/master/ha-architecture/images/wpmigration/cover.png)
 
-Lab Details
-===========
+# Lab Details
  
 1. This lab walks you through the step by step procedure on how to migrate an existing Wordpress site to an AWS with High Availibility and Scalibility.
 
@@ -13,19 +12,19 @@ Lab Details
 
 3. AWS Region: **N. Virginia (us-east-1)**
 
-Architecture Diagram
-====================
+# Architecture Diagram
+
 ![](https://github.com/hoabka/saa-c02-labs/blob/master/ha-architecture/images/wpmigration/architecture.png)
 
-AWS Service
-===========
+# AWS Service
+
 
 1.  Relational Database Service --- We will use AWS RDS MySQL which is fully Managed MySql Database services provided by AWS
 2.  Application Load Balancer --- We will use AWS ALB as a single entry point for our Website. ALB will route requests to multiple EC2 behind ALB
 3.  Elastic File System --- AWS EFS is fully managed network file system which we will use for storing all our WordPress config files, plugins, WebPages. Another advantage of EFS is we can mount EFS to Multiple EC2 Instances, so that every EC2 Instance points to same files and we can run multiple EC2 to achieve High Availability and Fault Tolerance.
 
-Task Details
-============
+# Task Details
+
 1. Create RDS Instance
 2. Create EC2 Instance
 3. Create EFS
@@ -34,10 +33,10 @@ Task Details
 6. Create ALB and Target Group
 7. Export and Import Wordpress data
 
-Let's Get Started
-=================
+# Let's Get Started
 
-###1. Create Your MySQL Database
+
+### 1. Create Your MySQL Database
 
 -   To begin, go to Amazon RDS in the AWS console. Click the orange Create database button to get started.
 
@@ -58,12 +57,12 @@ Let's Get Started
 
 Make a note of Master Username, Password and Initial DB we will need this info in configuring the WP
 
-###2\. Create EC2 Instance
+### 2. Create EC2 Instance
 
 -   Create EC2 Instance with the Amazon Linux 2 AMI (HVM) in the VPC in which you created RDS
 -   In Security Group of RDS open port 3306 in inbound rules and add the EC2 Instance Security group Id, so that EC2 can connect to your RDS MySQL.
 
-###3. Create EFS
+### 3. Create EFS
 
 -   Go to EFS console and click on create file system
 -   Enter the name of EFS
@@ -79,7 +78,7 @@ AWS EFS
 
 ![]( https://github.com/hoabka/saa-c02-labs/blob/master/ha-architecture/images/wpmigration/createEFS.png)
 
-###4. Attach EFS to EC2
+### 4. Attach EFS to EC2
 
 -   Once you are done with the changes SSH into the EC2 Instance and we will attach this file system to EC2 Instance so that it can store the data into file system
 -   Create `/var/www/html` directory using following command. We will store all our content under this directory used by Apache Web Server
@@ -114,7 +113,7 @@ Now that our file system mount is successful we are good to go ahead but before 
 
 Now whenever your EC2 instance gets rebooted due to some reason it will mount the file system automatically.
 
-###5. Installing the Apache Web Server
+### 5. Installing the Apache Web Server
 
 -   To run WordPress, you need to run a web server on your EC2 instance. The open source [Apache web server](https://httpd.apache.org/) is the most popular web server used with WordPress.
 -   To install Apache on your EC2 instance, run the following command in your terminal:
@@ -139,7 +138,7 @@ Now you can go to browser and hit the **<ec2_public_DNS>** you will see the ap
 
 Apache Server Test Page
 
-###6. Creating Application ALB and Register EC2 in Target Group
+### 6. Creating Application ALB and Register EC2 in Target Group
 
 -   Go to EC2 Console and click on Load Balancers from the left navigation panel
 -   Click on Create Load Balancer button
@@ -167,7 +166,7 @@ g. In the success codes enter 200, 301 (After Installing WordPress when we w
 
 Note: Add 200 and 301 both the status code because till now when we hit the request the success code will be 200 but after installing and configuring WordPress the success code will be 301. Don't forget to Add the ID of ALB Sg into the inbound rule of EC2 SG.
 
-###7. Download and Configure WordPress
+### 7. Download and Configure WordPress
 
 -   In this step, we will download the WordPress software and set up the configuration.
 -   First, download and uncompress the software by running the following commands in your terminal:
@@ -201,7 +200,7 @@ define( 'DB_HOST', 'localhost' );
 
 **DB_HOST** : The RDS MySQL Host which you can get it from the RDS Console, click on your Database Instance and you will see the connection endpoint
 
-###8. Deploying the WordPress
+### 8. Deploying the WordPress
 
 -   In this step, we will make your Apache web server handle requests for WordPress.
 -   First, install the application dependencies we need for WordPress. In your terminal, run the following command.
@@ -244,7 +243,7 @@ Congratulations !!! 🥳 You have successfully Installed the WordPress on AWS C
 
 Open Your Web browser and hit <ec2_public_dns> you will see the WordPress Configuration Page. Follow the simple steps to configure the WordPress by following the instructions and make sure you securely store your username and password for WordPress Admin
 
-###9. Make it Highly Available
+### 9. Make it Highly Available
 
 -   Now as I have told you that we will make this set up as Highly Available, so that because of any reason if our EC2 Instance is down then another Instance should be available to serve the requests
 -   We have already created AWS Elastic File System so that we can mount that to Multiple EC2 Instances and we have already moved all our code to EFS which is mounted under `/var/www/html` directory
@@ -268,7 +267,7 @@ c. Run `ls /var/www/html` command and you will see all the files are present u
 
 -   Once the above things are verified go to the Target Group which you have created while creating ALB and register you new EC2 Instances in that Target Group
 
-9\. Data Migration
+### 10. Data Migration
 
 Congratulations !!
 ==================
