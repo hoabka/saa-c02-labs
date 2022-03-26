@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fad995ac-a223-41ca-a14a-2a29f46baceb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ha-architecture/Migrate WP to AWS with EFS and RDS.md" beforeDir="false" afterPath="$PROJECT_DIR$/ha-architecture/Migrate WP to AWS with EFS and RDS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iam/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +26,15 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ha-architecture/images/wpmigration" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/iam/images" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/iam/images" />
       <recent name="$PROJECT_DIR$/ha-architecture/images/wpmigration" />
       <recent name="$PROJECT_DIR$/ha-architecture/images" />
       <recent name="$PROJECT_DIR$/ha-architecture" />
       <recent name="$PROJECT_DIR$/rds-labs/images" />
-      <recent name="$PROJECT_DIR$/rds-labs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ha-architecture/images/imgTemplate.png" />
