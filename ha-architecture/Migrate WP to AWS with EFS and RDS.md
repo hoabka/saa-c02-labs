@@ -269,6 +269,58 @@ c. Run `ls /var/www/html` command and you will see all the files are present u
 
 ### 10. Data Migration
 
+#### How To Export WordPress Content
+
+-   Log in to the WordPress instance that you wish to migrate.
+
+-   Select the "All-in-One WP Migration -> Export" option.
+
+    [![WordPress migration](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-1.png)](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-1.png)
+
+-   On the resulting page, click the "Export" button and select the "File" option to export the entire content of your WordPress blog, including plugins and themes. If you click other option you will be redirected to a product page for buying the specific extension to export in the format you have selected.
+
+    [![WordPress migration](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-2.png)](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-2.png)
+
+-   You will now be prompted to download a ZIP file containing the content to be migrated through your browser.
+
+    [![WordPress migration](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-3.png)](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-3.png)
+
+-   Save this file to your local system.
+
+#### How To Import WordPress Content
+
+Next, you must import the ZIP file into your new WordPress blog or website. Follow these steps:
+
+-   Log in to the new WordPress instance.
+
+-   Select the "All-in-One WP Migration -> Import" option.
+
+    [![WordPress migration](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-4.png)](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-4.png)
+
+-   Drag and drop the ZIP file obtained earlier into the page, or click the "File" button on the page and select the ZIP file from your local system.
+
+    [![WordPress migration](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-5.png)](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-5.png)
+
+The file will now be uploaded to the new WordPress instance. You will see a progress bar indicating the progress of the upload.
+
+-   Click the "Continue" button for finishing the exportation process.
+
+    [![WordPress migration](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-6.png)](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-6.png)
+
+-   Once the file is successfully uploaded, the content within it will be automatically transferred to the new WordPress instance and you will be prompted to log in to the WordPress dashboard again.
+
+> NOTE: At this point, you must log in using the credentials for the original imported WordPress instance.
+
+-   You will now be presented with a success page. Click the "Permalinks Settings" link to proceed.
+
+    [![WordPress migration](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-7.png)](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-7.png)
+
+-   Verify the permalink settings on the resulting page. In most cases, no changes will be necessary. Click "Save Changes" to save your changes.
+
+    [![WordPress migration](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-8.png)](https://docs.bitnami.com/images/img/apps/wordpress/wordpress-migrate-8.png)
+
+Your content should now be fully migrated and usable on the new WordPress instance.
+
 Congratulations !!
 ==================
 
