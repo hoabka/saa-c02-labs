@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fad995ac-a223-41ca-a14a-2a29f46baceb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cicd/cloudformation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cicd/images/cloudformation/task2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cicd/images/cloudformation/task3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cicd/resources/cloudformation/vpc-1.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cicd/resources/cloudformation/vpc-2.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,17 +30,18 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/iam/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cicd" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cicd" />
+      <recent name="$PROJECT_DIR$/cicd/images/cloudformation" />
       <recent name="$PROJECT_DIR$/iam/images" />
       <recent name="$PROJECT_DIR$/ha-architecture/images/wpmigration" />
       <recent name="$PROJECT_DIR$/ha-architecture/images" />
-      <recent name="$PROJECT_DIR$/ha-architecture" />
-      <recent name="$PROJECT_DIR$/rds-labs/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cicd/resources/cloudformation" />
       <recent name="$PROJECT_DIR$/ha-architecture/images/imgTemplate.png" />
       <recent name="$PROJECT_DIR$/ha-architecture/images/wpmigration" />
       <recent name="$PROJECT_DIR$/ha-architecture/images/wpmigration/imageTemplate.png" />
