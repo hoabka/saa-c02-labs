@@ -31,54 +31,7 @@ You must ensure that you have at least Python 3 version 3.3+ installed. To verif
 `python3 --version`
 
 **Installation:**
-
-The recommendation for installing the AWS CLI is to use the bundled installer provided by AWS. The bundled installer includes all dependencies required for the installation.
-
-- Download aws cli bundle
-
-`curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"`
-
-- Unzip file 
-
-`unzip awscli-bundle.zip`
-
-- Install AWS CLI and make it is ecuxatable 
-
-`sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws`
-
-Using the **-b** option allows all users to use the AWS CLI from any directory, meaning you will not need to specify the install directory in the user's $PATH variable. 
-
-#### Windows
-
-Prerequisites:
-
-You must be running Microsoft Windows XP or later.
-
-Installation:
-
-There are three MSI installers to choose from:
-
-- [64-bit version](https://s3.amazonaws.com/aws-cli/AWSCLI64PY3.msi)
-- [32-bit version](https://s3.amazonaws.com/aws-cli/AWSCLI32PY3.msi)
-- [A CLI Setup file](https://s3.amazonaws.com/aws-cli/AWSCLISetup.exe) that will automatically detect what you are running and install the appropriate version (64-bit or 32-bit)
-
-- Select the option required to download the MSI
-
-- Run the downloaded MSI installer or the CLI setup file, as required
-
-- Follow the instructions that appear
-
-Once installed, the program files will be stored as shown:
-
-**64-bit version**
-
-`C:\Program Files\Amazon\AWSCLI `
-
-**32-bit version**
-
-`C:\Program Files (x86)\Amazon\AWSCLI`
-
-To confirm the installation, use the `aws --version` command at a command prompt. 
+[Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 ### 2. Configure AWS Credential
 -----------------------------------
