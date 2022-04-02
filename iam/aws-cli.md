@@ -44,9 +44,9 @@ The recommendation for installing the AWS CLI is to use the bundled installer pr
 
 - Install AWS CLI and make it is ecuxatable 
 
-sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+`sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws`
 
-Using the -b option allows all users to use the AWS CLI from any directory, meaning you will not need to specify the install directory in the user's $PATH variable. 
+Using the **-b** option allows all users to use the AWS CLI from any directory, meaning you will not need to specify the install directory in the user's $PATH variable. 
 
 #### Windows
 
