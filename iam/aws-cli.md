@@ -26,9 +26,9 @@ First, you need to download the AWS CLI. Depending on your operating system, it 
 
 **Prerequisites:**
 
-You must ensure that you have at least Python 2 version 2.6.5+ or Python 3 version 3.3+ installed. To verify your current version, run the command:
+You must ensure that you have at least Python 3 version 3.3+ installed. To verify your current version, run the command:
 
-`python --version`
+`python3 --version`
 
 **Installation:**
 
