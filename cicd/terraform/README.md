@@ -63,6 +63,10 @@ In this lab we using terraform to create resource as a below
 - MYSQL RDS
 
 Inside terraform code folder
-**terraform init
-terraform plan
-terraform apply **
+- terraform init
+- terraform plan
+- terraform apply 
+
+### Delete resource 
+Inside terraform code folder
+- terraform destroy
