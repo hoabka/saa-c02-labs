@@ -80,19 +80,18 @@ Create a launch template that will be used by the Auto Scaling group. The launch
 
 9.  Expand *Advanced Details*, and paste the user data in the box.  
 
->    #!/bin/bash
-    yum install httpd -y
-    /sbin/chkconfig --levels 235 httpd on
-    service httpd start
-    instanceId=$(curl http://169.254.169.254/latest/meta-data/instance-id)
-    region=$(curl http://169.254.169.254/latest/dynamic/instance-identity/document | grep region | awk -F\" '{print $4}')
-    echo "<h1>You are accessing at host ID: $instanceId</h1>" > /var/www/html/index.html  
-    sudo amazon-linux-extras install epel -y  
-    sudo yum install -y stress  
-    stress --cpu 2 --timeout 300
-
-
-
+```console
+#!/bin/bash
+yum install httpd -y
+/sbin/chkconfig --levels 235 httpd on
+service httpd start
+instanceId=$(curl http://169.254.169.254/latest/meta-data/instance-id)
+region=$(curl http://169.254.169.254/latest/dynamic/instance-identity/document | grep region | awk -F\" '{print $4}')
+echo "<h1>You are accessing at host ID: $instanceId</h1>" > /var/www/html/index.html  
+sudo amazon-linux-extras install epel -y  
+sudo yum install -y stress  
+stress --cpu 2 --timeout 300
+```
 
 10. Click Create Launch Template.
 
