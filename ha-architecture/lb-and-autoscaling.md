@@ -79,7 +79,8 @@ Create a launch template that will be used by the Auto Scaling group. The launch
 8.  Storage should automatically be populated with a volume, so leave that as default and don't add anything to the network section.
 
 9.  Expand *Advanced Details*, and paste the user data in the box.  
-[pookie](#pookie)
+
+## Userđata
 ```console
 #!/bin/bash
 yum install httpd -y
