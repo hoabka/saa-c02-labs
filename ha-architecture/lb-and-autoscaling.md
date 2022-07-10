@@ -80,7 +80,7 @@ Create a launch template that will be used by the Auto Scaling group. The launch
 
 9.  Expand *Advanced Details*, and paste the user data in the box.  
 
-## Userđata
+## Userdata
 ```console
 #!/bin/bash
 yum install httpd -y
